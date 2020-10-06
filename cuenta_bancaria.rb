@@ -7,7 +7,8 @@ class CuentaBancaria
     ## Crear el constructor que reciba el nombre_usuario y numero_de_cuenta y lo asigne a los atributos
     ## Agregar un tercer parámetro opcional al constructor que permita establecer si una cuenta es VIP (1pto), este valor puede ser 1 o 0. Por defecto será 0.
     def initialize (nombre_de_usuario, numero_de_cuenta, cuenta_vip = 0)
-        
+        nombre_de_usuario = nombre_de_usuario.to_s
+
         ## Levantar una excepción del tipo RangeError si el atributo numero_de_cuenta tiene un número de dígitos distinto a 8
         digitos_cuenta = numero_de_cuenta.digits
         raise RangeError,  "El número de cuenta debe tener 8 dígitos" if digitos_cuenta.length != 8
