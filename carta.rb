@@ -20,7 +20,9 @@ prueba = []
     prueba << carta
 end
 
-puts prueba
+
+puts prueba 
+
 
 =begin
 
